@@ -24,15 +24,21 @@ Here is description of data present in the file complete_tidy_data.txt
 </tr>
 <tr>
 <td>Mean</td>
-<td>The average of each variable for each activity and each subject(Which is the average of all variables)</td>
+<td>The average of each variable for <b>each activity and each subject</b>(Which is the average of all variables which are described in the table below[3 - 68])</td>
 <td>TotalSampleMean</td>
 </tr>
 </table>
 
 
-Tidy data is a standard way of mapping the meaning of a dataset to its structure. A dataset is messy or tidy depending on how rows, columns and tables are matched up with observations, variables and types. In tidy data:
+Tidy data is a standard way of mapping the meaning of a dataset to its structure. A dataset is messy or tidy depending on how rows, columns and tables are matched up with observations, variables and types. 
+
+
+In tidy data:
+
 1. Each variable forms a column.
+
 2. Each observation forms a row.
+
 3. Each type of observational unit forms a table.
 
 
