@@ -1,5 +1,9 @@
 An experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
 
+
+
+
+
 Here is description of data present in the file complete_tidy_data.txt
 
 <table border="none">
@@ -26,10 +30,16 @@ Here is description of data present in the file complete_tidy_data.txt
 </table>
 
 
-The tidy data set described below contains the information of mean and standard deviation of A 561-feature vector with time and frequency domain variables. This information is extracted as it is from the data set provided. In my script it is maintained in a data.table called tidy_data.
+Tidy data is a standard way of mapping the meaning of a dataset to its structure. A dataset is messy or tidy depending on how rows, columns and tables are matched up with observations, variables and types. In tidy data:
+1. Each variable forms a column.
+2. Each observation forms a row.
+3. Each type of observational unit forms a table.
 
-Below is the information about the columns which are present in the data.table.
 
+
+The tidy data set described below contains the information of mean and standard deviation of A 561-feature vector with time and frequency domain variables. This information is extracted as it is from the training and test data sets provided. In my script it is maintained in a data.table called tidy_data.
+
+Below is the information about the columns in the data.table tidy_data.
 
 <table>
 <tr>
