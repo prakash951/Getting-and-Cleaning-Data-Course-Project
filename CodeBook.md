@@ -24,26 +24,13 @@ Here is description of data present in the file complete_tidy_data.txt
 </tr>
 <tr>
 <td>Mean</td>
-<td>The average of each variable for <b>each activity and each subject</b>(Which is the average of all variables which are described in the table below[3 - 68])</td>
+<td>The average of each variable for <b>each activity and each subject</b>(Which is the average of averages of all variables which are described in the table below[3 - 68] for each activity )</td>
 <td>TotalSampleMean</td>
 </tr>
 </table>
 
 
-Tidy data is a standard way of mapping the meaning of a dataset to its structure. A dataset is messy or tidy depending on how rows, columns and tables are matched up with observations, variables and types. 
-
-
-In tidy data:
-
-1. Each variable forms a column.
-
-2. Each observation forms a row.
-
-3. Each type of observational unit forms a table.
-
-
-
-The tidy data set described below contains the information of mean and standard deviation of A 561-feature vector with time and frequency domain variables. This information is extracted as it is from the training and test data sets provided. In my script it is maintained in a data.table called tidy_data.
+The tidy data set described below contains the information of mean and standard deviation of A 561-feature vector with time and frequency domain variables. This information is extracted from the training and test data sets provided. In my script it is maintained in a data.table called tidy_data.
 
 Below is the information about the columns in the data.table tidy_data.
 
@@ -394,3 +381,6 @@ Below is the information about the columns in the data.table tidy_data.
 <td>FrequencyBodyBodyGyroJerkMagStandardDeviation</td>
 </tr>
 </table>
+
+
+for more information please refer Readme file
