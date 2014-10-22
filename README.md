@@ -28,7 +28,8 @@ Takeaways
 ========================================
 
 1). tidy_data.txt
-2). tidy_aggregate.txt
-3). complete_tidy_data.txt
+<br/>
+<br/>
+2). complete_tidy_data.txt
 
 
