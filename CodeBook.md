@@ -9,7 +9,7 @@ Initial tidy data set descriptive activity names
 <table>
 <tr>
 <td><b>Feature Name</b></td>
-<td><b>Descriotive Name</b></td>
+<td><b>Descriptive Name</b></td>
 </tr>
 <tr>
 <td>Subject</td>
