@@ -2,7 +2,12 @@ An experiments have been carried out with a group of 30 volunteers within an age
 
 Here is description of data present in the file complete_tidy_data.txt
 
-<table>
+<table border="none">
+<tr>
+<td><b>Name</b></td>
+<td><b>Description</b></td>
+<td><b>Descriptive Name</b></td>
+</tr>
 <tr>
 <td>Subject</td>
 <td>Volunteer ID within an age bracket of 19-48 years(Its range is from 1 to 30)</td>
