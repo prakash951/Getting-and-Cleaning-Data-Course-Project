@@ -1,10 +1,30 @@
 An experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
 
+Here is description of data present in the file complete_tidy_data.txt
+
+<table>
+<tr>
+<td>Subject</td>
+<td>Volunteer ID within an age bracket of 19-48 years(Its range is from 1 to 30)</td>
+<td>Subject</td>
+</tr>
+<tr>
+<td>Activity</td>
+<td>Subject performed activity name(WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)</td>
+<td>ActivityName</td>
+</tr>
+<tr>
+<td>Mean</td>
+<td>The average of each variable for each activity and each subject(Which is cumilative mean of all variables)</td>
+<td>TotalSampleMean</td>
+</tr>
+</table>
 
 
+The tidy data set described below contains the information of mean and standard deviation of A 561-feature vector with time and frequency domain variables. This information is extracted as it is from the data set provided. In my script it is maintained in a data.table called tidy_data.
 
+Below is the information about the columns which are present in the data.table.
 
-Initial tidy data set descriptive activity names
 
 <table>
 <tr>
