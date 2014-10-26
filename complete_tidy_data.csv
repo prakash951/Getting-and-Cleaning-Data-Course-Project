@@ -1,4 +1,4 @@
-"Subject", "ActivityName", "TotalSampleMean"
+"Subject" "ActivityName" "TotalSampleMean"
 1 "WALKING" -0.193204572492262
 1 "WALKING_UPSTAIRS" -0.315336808393305
 1 "WALKING_DOWNSTAIRS" -0.149358035365099
