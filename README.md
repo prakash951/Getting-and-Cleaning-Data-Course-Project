@@ -29,7 +29,8 @@ Takeaways
 
 1). tidy_data.txt
 <br/>
-<br/>
-2). complete_tidy_data.txt
+2). partial_tidy.txt
+<br />
+3). complete_tidy_data.txt
 
 
