@@ -3,7 +3,7 @@ rdir <- "./UCI HAR Dataset"
 activities <- read.table(paste(rdir,"activity_labels.txt",sep="/"), stringsAsFactors=FALSE, col.names=c("ID","ACTIVITY NAME"))
 features <- read.table(paste(rdir,"features.txt",sep="/"), stringsAsFactors=FALSE, col.names=c("Feature ID", "Feature Name"))
 
-
+options(digits=22)
 test_x <- read.table(paste(rdir,"test", "X_test.txt",sep="/"),stringsAsFactors=FALSE,header=FALSE)
 test_y <- read.table(paste(rdir,"test", "y_test.txt",sep="/"),stringsAsFactors=FALSE,col.names=c("ACTIVITY NAME"),header=FALSE)
 
@@ -51,33 +51,45 @@ names(tidy_data) <- c("Subject","ActivityName",features[,2])
 #Function to implement group by 
 grouper <- function(data,activity)
 {
-	options(digits=20)
+	#options(digits=20)
     subject <- sort(unique(data$Subject))
 	result_frame <- data.frame()
+	result_second_frame <- data.frame()
     for(sub1 in subject)
     {
 		for(act in activity)
 		{
 			subset_data <- data[data$Subject==sub1 & data$ActivityName==act,]
 			result <- c()
+			row_index <- nrow(result_frame)
+			result_second_frame[row_index+1,1]=sub1
+			result_second_frame[row_index+1,2]=act
+			
 			for(i in 3:ncol(subset_data))
 			{
-				result <- c(result,mean(subset_data[[i]]))
+				tmp <- mean(subset_data[[i]])
+				result <- c(result,tmp)
+				result_second_frame[row_index+1,i] = tmp
 			}
-			print(result)
-			print(mean(result))
-			row_index <- nrow(result_frame)
+			#print(result)
+			#print(mean(result))
+
 			result_frame[row_index+1,1]=sub1
 			result_frame[row_index+1,2]=act
 			result_frame[row_index+1,3]=mean(result)
         }
     }
+	names(result_second_frame) = names(data)
 	names(result_frame) = c("Subject", "ActivityName", "TotalSampleMean")
-	result_frame
+	return(list(result = result_frame, result_second = result_second_frame))
 }
 
 #From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 tidy_mean_data <- grouper(tidy_data,activities[[2]])
 
-
-write.csv(file="complete_tidy_data.csv",tidy_mean_data,row.names=F)
+#Extracted Data From The Source DataSet
+write.table(file="tidy.txt",tidy_data,row.names=F)
+#Partially independent tidy data set with the average of each variable for each activity and each subject.
+write.table(file="partial_tidy.txt",tidy_mean_data$result_second,row.names=F)
+#Complete Tidy Data Set(tidy data set with the average of each variable for each activity)
+write.csv(file="complete_tidy_data.txt",tidy_mean_data$result,row.names=F)
